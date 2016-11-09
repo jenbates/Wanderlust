@@ -1,95 +1,20 @@
-    <!DOCTYPE html>
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-<title>Wanderlust</title>
-<script src="jquery.js"></script>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <style>
-    header {
-      text-align: center;
-      background: url('https://s17.postimg.org/wtidqmxyn/Summer.jpg');
-      background-size: cover;
-      color: white;
-      font-family: georgia, sans-serif;
-    }
-    a {
-      color: white;
-    }
-    h1 {
-      font-size: 70px;
-      padding: 0px 10px 0 10px;
-    }
-    h2 {
-      font-size: 20px;
-      padding: 0px 10px 100px 10px;
-    }
-    h3 {
-      padding: 100px 0px 0px 0px;
-      font-size: 100px;
-      /* border: 7px solid white;
-      border-radius: 20px; */
-    }
-    ul {
-      padding: 50px 0px 50px 0px;
-      background: rgba(255, 255, 255, 0.5);
-    }
-    li {
-      display: inline;
-      padding: 10px 10px 10px 10px;
-      font-size: 20px;
-    }
-    li a:hover {
-      background-color: #555;
-      color: white;
-    }
-    div {
-      height: 200px;
-      background-size: cover;
-      font-size: 30px;
-      max-width: 500px;
-      padding: 20px;
-      margin: 0 auto;
-    }
-    .quote {
-      background-color: white;
-      color: black;
-      max-width: 500px;
-      padding: 100px 20px 100px 20px;
-      margin: 0 auto;
-      font-family: georgia, sans-serif;
-    }
-    .about {
-      background-image: url("https://s17.postimg.org/tlqfvgfen/Thailand.jpg");
-    }
-    .alaska {
-
-    }
-    #menu {
-      position: fixed;
-      left: 0;
-      top: 0%;
-      bottom: 0%;
-      width: 8em;
-      margin-top: -2.5em;
-}
-    @media (max-width: 500px) {
-      h1 {
-        font-size: 36px;
-      }
-      li {
-        display: block;
-        padding: 5px;
-      }
-      body {
-        background: red;
-      }
-    }
-  </style>
+<meta name="viewport" content="width = 1050, user-scalable = no" />
+<script type="text/javascript" src="jquery.min.1.7.js"></script>
+<script type="text/javascript" src="modernizr.2.5.3.min.js"></script>
 </head>
 <body>
-  <header>
-    <h3 id="first">&#9775;</h3>
-    <h1 id="second">WANDERLUST</h1>
-    <h2 id="third">Explore. Live. Laugh.</h2>
+
+ <header>
+    <h3>&#9775;</h3>
+    <h1>WANDERLUST</h1>
+    <h2>Explore. Live. Laugh.</h2>
     <ul id="menu">
       <li><a href="#">Home</a></li>
       <li><a href="#">About</a></li>
@@ -104,19 +29,71 @@
   <small>- J.R.R. Tolkien</small></p>
 </div>
 <div class="about">
-  <h2>Who, what, where, why, when?</h2>
+  <h2>...........</h2>
   <p>We are......</p>
 </div>
-<div class="alaska">
-  <h2>Alaska</h2>
-  <p>PUT LIBRARY OF PHOTO BOOK HERE</p>
+
+<div class="flipbook-viewport">
+	<div class="container">
+		<div class="flipbook">
+			<div style="background-image:url(pages/1.jpg)"></div>
+			<div style="background-image:url(pages/2.jpg)"></div>
+			<div style="background-image:url(pages/3.jpg)"></div>
+			<div style="background-image:url(pages/4.jpg)"></div>
+			<div style="background-image:url(pages/5.jpg)"></div>
+			<div style="background-image:url(pages/6.jpg)"></div>
+			<div style="background-image:url(pages/7.jpg)"></div>
+			<div style="background-image:url(pages/8.jpg)"></div>
+			<div style="background-image:url(pages/9.jpg)"></div>
+			<div style="background-image:url(pages/10.jpg)"></div>
+			<div style="background-image:url(pages/11.jpg)"></div>
+			<div style="background-image:url(pages/12.jpg)"></div>
+		</div>
+	</div>
 </div>
-<div class="country">
-  <h2>Next Country</h2>
-  <p>PUT LIBRARY OF PHOTO BOOK HERE</p>
-</div>
-<script>
-$("button").on("click", function(){ alert("clicked!") })
-;
+
+
+<script type="text/javascript">
+
+function loadApp() {
+
+	// Create the flipbook
+
+	$('.flipbook').turn({
+			// Width
+
+			width:600,
+			
+			// Height
+
+			height:200,
+
+			// Elevation
+
+			elevation: 50,
+			
+			// Enable gradients
+
+			gradients: true,
+			
+			// Auto center this flipbook
+
+			autoCenter: true
+
+	});
+}
+
+// Load the HTML4 version if there's not CSS transform
+
+yepnope({
+	test : Modernizr.csstransforms,
+	yep: ['turn.js'],
+	nope: ['turn.html4.min.js'],
+	both: ['css/basic.css'],
+	complete: loadApp
+});
+
 </script>
+
 </body>
+</html>

@@ -1,0 +1,59 @@
+    <!DOCTYPE html>
+<head>
+<title>Wanderlust</title>
+<script
+  src="https://code.jquery.com/jquery-1.12.4.js"
+  integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+  crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="turn.js"></script>
+  <script src="hash.js"></script>
+  <script src="scissor.js"></script>
+  <script src="zoom.js"></script>
+</head>
+
+<body>
+  <header>
+    <h3>&#9775;</h3>
+    <h1>WANDERLUST</h1>
+    <h2>Explore. Live. Laugh.</h2>
+    <ul id="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Alaska</a></li>
+      <li><a href="#">Thailand</a></li>
+      <li><a href="#">Italy</a></li>
+      <li><a href="#">United Kingdom</a></li>
+    </ul>
+  </header>
+  <div class="quote">
+  <p>Not all those who wander are lost.<br />
+  <small>- J.R.R. Tolkien</small></p>
+</div>
+<div class="about">
+  <h2>...........</h2>
+  <p>We are......</p>
+</div>
+<div id="flipbook">
+	<div class="hard"> Turn.js </div>
+	<div class="hard"></div>
+	<div> Page 1 </div>
+	<div> Page 2 </div>
+	<div> Page 3 </div>
+	<div> Page 4 </div>
+	<div class="hard"></div>
+	<div class="hard"></div>
+</div>
+<script type="text/javascript">
+	$("#flipbook").turn({
+		width: 400,
+		height: 300,
+		autoCenter: true
+	});
+</script>
+<script>
+$("button").on("click", function(){ alert("clicked!") })
+;
+</script>
+</body>
