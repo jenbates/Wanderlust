@@ -1,6 +1,122 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>CSS Exercises 1</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
+    <!DOCTYPE html>
+<head>
+<title>Wanderlust</title>
+<script src="jquery.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    header {
+      text-align: center;
+      background: url('https://s17.postimg.org/wtidqmxyn/Summer.jpg');
+      background-size: cover;
+      color: white;
+      font-family: georgia, sans-serif;
+    }
+    a {
+      color: white;
+    }
+    h1 {
+      font-size: 70px;
+      padding: 0px 10px 0 10px;
+    }
+    h2 {
+      font-size: 20px;
+      padding: 0px 10px 100px 10px;
+    }
+    h3 {
+      padding: 100px 0px 0px 0px;
+      font-size: 100px;
+      /* border: 7px solid white;
+      border-radius: 20px; */
+    }
+    ul {
+      padding: 50px 0px 50px 0px;
+      background: rgba(255, 255, 255, 0.5);
+    }
+    li {
+      display: inline;
+      padding: 10px 10px 10px 10px;
+      font-size: 20px;
+    }
+    li a:hover {
+      background-color: #555;
+      color: white;
+    }
+    div {
+      height: 200px;
+      background-size: cover;
+      font-size: 30px;
+      max-width: 500px;
+      padding: 20px;
+      margin: 0 auto;
+    }
+    .quote {
+      background-color: white;
+      color: black;
+      max-width: 500px;
+      padding: 100px 20px 100px 20px;
+      margin: 0 auto;
+      font-family: georgia, sans-serif;
+    }
+    .about {
+      background-image: url("https://s17.postimg.org/tlqfvgfen/Thailand.jpg");
+    }
+    .alaska {
+
+    }
+    #menu {
+      position: fixed;
+      left: 0;
+      top: 0%;
+      bottom: 0%;
+      width: 8em;
+      margin-top: -2.5em;
+}
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 36px;
+      }
+      li {
+        display: block;
+        padding: 5px;
+      }
+      body {
+        background: red;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h3 id="first">&#9775;</h3>
+    <h1 id="second">WANDERLUST</h1>
+    <h2 id="third">Explore. Live. Laugh.</h2>
+    <ul id="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Alaska</a></li>
+      <li><a href="#">Thailand</a></li>
+      <li><a href="#">Italy</a></li>
+      <li><a href="#">United Kingdom</a></li>
+    </ul>
+  </header>
+  <div class="quote">
+  <p>Not all those who wander are lost.<br />
+  <small>- J.R.R. Tolkien</small></p>
+</div>
+<div class="about">
+  <h2>Who, what, where, why, when?</h2>
+  <p>We are......</p>
+</div>
+<div class="alaska">
+  <h2>Alaska</h2>
+  <p>PUT LIBRARY OF PHOTO BOOK HERE</p>
+</div>
+<div class="country">
+  <h2>Next Country</h2>
+  <p>PUT LIBRARY OF PHOTO BOOK HERE</p>
+</div>
+<script>
+$("button").on("click", function(){ alert("clicked!") })
+;
+</script>
+</body>
